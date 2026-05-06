@@ -13,10 +13,11 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'ticket-frontend' # <-- IMPORTANTE: Cambia esto por el nombre exacto de tu servicio en Cloud Run
+      - 'ticket-frontend'
       - '--image=gcr.io/$PROJECT_ID/ticket-app:$COMMIT_SHA'
-      - '--region=us-central1' # <-- Verifica que sea tu región
+      - '--region=us-central1'
       - '--platform=managed'
+      - '--allow-unauthenticated' # <-- ¡Esta es la clave para que no falle!
 
 options:
   logging: CLOUD_LOGGING_ONLY
