@@ -1,12 +1,2520 @@
+<!-- Audiovisual y Eventos - HenryTic -->
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-primary-container": "#004361",
+                    "outline": "#6e7882",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4851",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "tertiary-container": "#a2abb1",
+                    "inverse-surface": "#213145",
+                    "primary": "#006591",
+                    "primary-container": "#00b4ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#374044",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary": "#576065",
+                    "outline-variant": "#bdc8d2",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#55637d",
+                    "on-primary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#141d21",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#515f78",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-container": "#d2e0fe",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#006591",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "display": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 240px;
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
 </head>
-<body>
-    <h1>Hola Mundo</h1>
-    <div id="app">Que tal, como estas</div>
-</body>
-</html>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" data-alt="A clean and modern corporate logo for HenryTic, featuring minimalist geometric shapes representing a fusion of hardware and software. The design uses a sophisticated color palette of sky blue and navy blue against a white background. The aesthetic is professional and high-tech, fitting for a premium audiovisual and technical services company." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Software</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Hardware</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Audiovisual</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-md font-bold hover:bg-on-primary-container transition-all active:scale-95 duration-100 shadow-sm">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-stack-lg overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container via-surface to-surface"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
+<span class="font-label-caps text-primary mb-stack-sm tracking-widest bg-primary-container/20 px-4 py-1 rounded-full">PREMIUM MULTIMEDIA PRODUCTION</span>
+<h1 class="font-display text-display text-on-surface max-w-3xl mb-stack-md">Cinematic Quality for the Modern Enterprise.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">From high-stakes event filming to surgical video editing, HenryTic delivers technical precision and creative excellence to elevate your brand's story.</p>
+<div class="flex gap-gutter">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-md font-bold hover:shadow-lg transition-all flex items-center gap-2">
+<span class="material-symbols-outlined">videocam</span> View Portfolio
+                    </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-body-md font-bold hover:bg-primary-container/10 transition-all">
+                        Our Process
+                    </button>
+</div>
+</div>
+</section>
+<!-- Service Bento Grid -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex justify-between items-end mb-stack-lg">
+<div class="max-w-xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-stack-sm">Core Audiovisual Services</h2>
+<p class="text-on-surface-variant font-body-md">Advanced production workflows designed for corporate events, product launches, and digital storytelling.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">movie_edit</span>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Event Filming (Large) -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="h-2/3 w-full bg-on-background relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background to-transparent z-10 opacity-60"></div>
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A high-end cinematic setup of a professional camera operator filming a corporate gala event. The lighting is sophisticated and moody, with blue and amber spotlights cutting through the dark venue. The focus is sharp on the high-tech 4K camera rig, highlighting the precision of the equipment in a professional setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrFHWi3g-v78H2pYGswC6R4YdzjEeGCrMNmpPDrYpD42f-77kLZaU9YXlIk4jJyPXD29soUPnFfDkFQv53sx6P0W6xlkB6cU7bxMmbiiJxt1CY6lCpNGF8g7N_4n4t-6CENpdmmx3d3MkExpqMSDCz7tbotRf0OYojIPM4AUrsrTIldYjsyIMtbuMCDXbR2mQ60XmyohvxNoAl61Q0WUt0jfbCJpxfn7MYrBzLuIHR7BXiVdDS7ysmYZgjTHoq9lTHMEPq7dMRaHM')"></div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-end">
+<span class="font-label-caps text-primary mb-2">PRODUCTION</span>
+<h3 class="font-h3 text-h3 mb-2">Professional Event Filming</h3>
+<p class="text-on-surface-variant font-body-sm">Multi-cam 4K coverage for conferences, summits, and grand openings with live-switching capabilities.</p>
+</div>
+</div>
+<!-- Video Editing -->
+<div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex gap-gutter items-center">
+<div class="w-24 h-24 flex-shrink-0 bg-primary-container/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">timeline</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-1">Post-Production &amp; Editing</h3>
+<p class="text-on-surface-variant font-body-sm">Surgical precision in editing, color grading, and sound design to craft a polished final narrative.</p>
+</div>
+</div>
+<!-- Live Streaming -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex flex-col">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">sensors</span>
+<h3 class="font-h3 text-h3 mb-1">Live Streaming</h3>
+<p class="text-on-surface-variant font-body-sm">Global broadcasting for your virtual events.</p>
+</div>
+<!-- Motion Graphics -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex flex-col">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">blur_on</span>
+<h3 class="font-h3 text-h3 mb-1">Motion Design</h3>
+<p class="text-on-surface-variant font-body-sm">Dynamic animated logos and infographics.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Showcase (Asymmetric Layout) -->
+<section class="py-stack-lg bg-inverse-surface text-inverse-on-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-h2 text-h2 mb-stack-md">Technical Excellence Starts with Precision Hardware</h2>
+<p class="text-surface-variant opacity-80 font-body-lg mb-stack-lg">We invest in industry-standard hardware to ensure your project benefits from the highest possible fidelity. No compromises on gear, no compromises on quality.</p>
+<ul class="space-y-stack-sm mb-stack-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Blackmagic Design 6K Cinema Workflow</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Professional Grade Sennheiser &amp; Rode Audio</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Aputure Cinematic Lighting Solutions</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Custom High-End Editing Workstations</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 grid grid-cols-2 gap-4 relative">
+<div class="pt-12">
+<div class="rounded-xl overflow-hidden shadow-2xl h-80">
+<img class="w-full h-full object-cover" data-alt="A professional close-up shot of a cinema camera lens with intricate details and reflections. The background is a blurred high-tech studio environment with soft blue lighting accents. The focus is on the precision glass and mechanical rings of the lens, emphasizing the technical excellence and high-end hardware used by the production company." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbJrxpdgvE5mW0xDX0Cq-8abtMTY14eZGc0Jyqrn7rydgo9Bbuaw-C6tVqjFClthVleT1i-v05wklO5i5g0E3d_59oiii95EqBPF-EWMlTJMLLMEQq7lkKEibSHLCr8AJUXhAcLxMxIv_w52jnBD_dSYitdCfplRGd5tDZWmvIvf_ESkY6elHxHE0Uo1QHKWLTBoIoOD2GKeufmDZcrEdlCk8cbqZvlpl0EefPDCFpsYcEjtpwikAbHDgh_s0qFICyuiBi10deTto"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-xl overflow-hidden shadow-2xl h-60">
+<img class="w-full h-full object-cover" data-alt="A top-down view of a modern professional video editing workstation. It features dual 4K monitors showing a complex timeline of a video project, a high-quality audio mixer, and a specialized editing console. The room is dimly lit with clean blue bias lighting behind the screens, creating a focused, high-performance atmosphere for technical creative work." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsYWK3Cwm2FNNI3C525zFcYZYITOZhCwBtNesLjEMEiU3Sy5dIX3mv-oQ7v6EquAe4qst5V8lygct2FUEEXLIVkSAHSCXl45VxuI7IROReAZq4e5DBrYIdr45JZLyBS2iBZ4utV22z6ivfcJW7EkziwywXiKUWidProacrFPNzvsSK1W5R8d_IGPpgi67JPDSMoPx4UVNoTQnlcSDKvm901AB31toUMiaDSrwVdh6L1rh2WYvM9pcxyIvrlNN8rdeCvJ3Pd6o-zRg"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl h-48 bg-primary-container/20 flex items-center justify-center p-stack-md text-center">
+<div>
+<p class="text-h1 font-bold text-primary-container">4K/6K</p>
+<p class="font-label-caps tracking-tighter">ULTRA HD CAPTURE</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Packages (Tiered Cards) -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Production Packages</h2>
+<p class="text-on-surface-variant font-body-md">Scalable solutions tailored to your project requirements.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Essential -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl flex flex-col shadow-sm">
+<span class="font-label-caps text-secondary mb-4">ESSENTIAL</span>
+<h3 class="font-h3 text-h3 mb-2">Event Record</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">Perfect for internal documentation and small seminars.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">$850<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> 1 Static 4K Camera</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Basic Audio Capture</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Raw Footage Delivery</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold hover:bg-primary-container/10 transition-all">Choose Plan</button>
+</div>
+<!-- Professional -->
+<div class="bg-surface-container-highest border-2 border-primary p-stack-lg rounded-xl flex flex-col relative shadow-xl transform md:-translate-y-4">
+<div class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-on-primary font-label-caps px-4 py-1 rounded-full">POPULAR</div>
+<span class="font-label-caps text-primary mb-4">PROFESSIONAL</span>
+<h3 class="font-h3 text-h3 mb-2">Multi-Cam Story</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">Dynamic coverage for public-facing corporate events.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">$2,400<span class="text-body-sm font-normal text-on-surface-variant">/day</span></div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> 2-3 Dynamic 4K Cameras</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Multi-Track Digital Audio</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Full Highlights Edit &amp; Grade</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Social Media Teasers</li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:bg-on-primary-container transition-all">Choose Plan</button>
+</div>
+<!-- Cinema -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl flex flex-col shadow-sm">
+<span class="font-label-caps text-secondary mb-4">ENTERPRISE</span>
+<h3 class="font-h3 text-h3 mb-2">Cinematic Brand</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">High-fidelity production for commercials and keynotes.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">Custom<span class="text-body-sm font-normal text-on-surface-variant"> pricing</span></div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> 6K Cinema Rig Workflow</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Advanced Lighting &amp; Grips</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Custom Motion Graphics</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Priority Editing Cycle</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold hover:bg-primary-container/10 transition-all">Inquire Now</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary rounded-3xl p-stack-lg flex flex-col md:flex-row items-center justify-between gap-gutter overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-on-primary-container/10 -skew-x-12 translate-x-1/4"></div>
+<div class="relative z-10 text-center md:text-left max-w-2xl">
+<h2 class="font-h2 text-h2 text-on-primary mb-4">Ready to start your next production?</h2>
+<p class="text-primary-fixed opacity-90 font-body-md">Our technical team is ready to assist you with scheduling, equipment logistics, and creative planning.</p>
+</div>
+<div class="relative z-10">
+<button class="bg-surface text-primary px-10 py-4 rounded-full font-bold text-h3 hover:bg-primary-container hover:text-on-primary-container transition-all shadow-lg active:scale-95">
+                            Let's Collaborate
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+<p class="font-body-sm text-surface-variant opacity-80 leading-relaxed">Precision in software, hardware, and audiovisual excellence. Delivering high-fidelity solutions for professional enterprises since 2010.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-inverse-primary dark:text-primary mb-2">Our Services</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Software Development</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Hardware Catalog</a>
+<a class="text-inverse-primary font-bold font-body-sm" href="#">AV Productions</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Terms of Service</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Privacy Policy</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-inverse-primary dark:text-primary mb-2">Connect With Us</h4>
+<div class="flex gap-4 mb-4">
+<a class="w-10 h-10 bg-on-primary-fixed-variant rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 bg-on-primary-fixed-variant rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+<p class="font-body-sm text-surface-variant opacity-80">© 2024 Inversiones Tecnológicas Henry (HenryTic). All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Desarrollo de Software - HenryTic -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface": "#f8f9ff",
+            "on-primary-container": "#004361",
+            "outline": "#6e7882",
+            "error": "#ba1a1a",
+            "surface-container-high": "#dce9ff",
+            "on-surface-variant": "#3e4851",
+            "on-surface": "#0b1c30",
+            "inverse-primary": "#89ceff",
+            "tertiary-fixed": "#dbe4ea",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "secondary-fixed-dim": "#b9c7e4",
+            "tertiary-container": "#a2abb1",
+            "inverse-surface": "#213145",
+            "primary": "#006591",
+            "primary-container": "#00b4ff",
+            "primary-fixed-dim": "#89ceff",
+            "surface-bright": "#f8f9ff",
+            "surface-container": "#e5eeff",
+            "on-secondary-fixed-variant": "#39475f",
+            "on-tertiary-container": "#374044",
+            "background": "#f8f9ff",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "inverse-on-surface": "#eaf1ff",
+            "surface-variant": "#d3e4fe",
+            "tertiary": "#576065",
+            "outline-variant": "#bdc8d2",
+            "secondary-fixed": "#d6e3ff",
+            "on-error-container": "#93000a",
+            "on-secondary-container": "#55637d",
+            "on-primary-fixed": "#001e2f",
+            "on-tertiary-fixed-variant": "#3f484d",
+            "tertiary-fixed-dim": "#bfc8ce",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#141d21",
+            "on-background": "#0b1c30",
+            "surface-container-highest": "#d3e4fe",
+            "on-primary-fixed-variant": "#004c6e",
+            "secondary": "#515f78",
+            "surface-container-low": "#eff4ff",
+            "primary-fixed": "#c9e6ff",
+            "secondary-container": "#d2e0fe",
+            "on-secondary-fixed": "#0d1c32",
+            "surface-tint": "#006591",
+            "surface-dim": "#cbdbf5",
+            "error-container": "#ffdad6"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "stack-sm": "8px",
+            "stack-md": "24px",
+            "container-max": "1280px",
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "stack-lg": "48px",
+            "unit": "8px",
+            "margin-desktop": "48px"
+          },
+          "fontFamily": {
+            "h1": ["Space Grotesk"],
+            "body-lg": ["Manrope"],
+            "display": ["Space Grotesk"],
+            "h2": ["Space Grotesk"],
+            "body-md": ["Manrope"],
+            "body-sm": ["Manrope"],
+            "h3": ["Space Grotesk"],
+            "label-caps": ["Space Grotesk"]
+          },
+          "fontSize": {
+            "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+            "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+            "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+            "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .hero-gradient {
+      background: radial-gradient(circle at top right, #e5eeff 0%, #f8f9ff 100%);
+    }
+    .bento-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopNavBar Section -->
+<header class="bg-surface docked full-width top-0 border-b border-outline-variant shadow-sm sticky z-50">
+<div class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" data-alt="A professional and sleek company logo for 'HenryTic' featuring a minimalist fusion of a software circuit and a camera lens element. The icon uses a clean sky blue and deep navy color scheme against a white background, symbolizing technical excellence in both software and audiovisual services. The aesthetic is high-tech, corporate, and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary">HenryTic</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Home</a>
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Software</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Hardware</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Audiovisual</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-90 transition-all active:scale-95 duration-100">
+        Get a Quote
+      </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="hero-gradient py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<span class="font-label-caps text-primary mb-4 block">ENGINEERING PRECISION</span>
+<h1 class="font-display text-display text-on-background mb-6">Software Development Architecture for the Modern Enterprise.</h1>
+<p class="font-body-lg text-on-surface-variant mb-8 max-w-xl">We build robust, scalable software solutions that align with your business objectives. From enterprise-grade systems to high-performance mobile applications, our engineering rigor ensures technical excellence.</p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-bold flex items-center gap-2">
+              Start Your Project <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-bold">
+              View Methodology
+            </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-video bg-surface-container rounded-xl shadow-lg border border-outline-variant overflow-hidden relative group">
+<div class="absolute inset-0 bg-on-background/5 flex items-center justify-center">
+<!-- Placeholder for tech visualization -->
+<div class="w-full h-full bg-gradient-to-br from-primary/10 to-transparent p-12">
+<div class="grid grid-cols-6 gap-2 opacity-20">
+<div class="h-20 bg-primary rounded"></div>
+<div class="h-32 bg-primary rounded"></div>
+<div class="h-24 bg-primary rounded"></div>
+<div class="h-40 bg-primary rounded"></div>
+<div class="h-16 bg-primary rounded"></div>
+<div class="h-28 bg-primary rounded"></div>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-8 bg-white/90 backdrop-blur-md p-6 rounded-lg shadow-xl border border-outline-variant max-w-xs">
+<span class="font-label-caps text-primary text-[10px] mb-1 block">LIVE STATISTICS</span>
+<p class="font-h3 text-on-surface font-bold">99.9% Uptime Architecture</p>
+<p class="font-body-sm text-on-surface-variant">Built for critical enterprise performance.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-stack-lg text-center">
+<h2 class="font-h2 text-on-background mb-4">Specialized Software Solutions</h2>
+<p class="font-body-md text-on-surface-variant max-w-2xl mx-auto">Precision engineering across every platform. We deliver software that drives efficiency and innovation.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Custom Software -->
+<div class="md:col-span-8 bg-surface-container-low p-stack-md rounded-xl border border-outline-variant flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="w-12 h-12 bg-primary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary-container">code</span>
+</div>
+<h3 class="font-h3 text-on-surface mb-4">Custom Software Development</h3>
+<p class="font-body-md text-on-surface-variant mb-6 max-w-xl">Tailored backend and frontend architectures designed to solve unique organizational challenges. We utilize modern tech stacks (Node.js, Python, Go, React) to ensure long-term maintainability and performance.</p>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-white px-3 py-1 rounded-full text-body-sm font-medium border border-outline-variant">Microservices</span>
+<span class="bg-white px-3 py-1 rounded-full text-body-sm font-medium border border-outline-variant">API Integration</span>
+<span class="bg-white px-3 py-1 rounded-full text-body-sm font-medium border border-outline-variant">Cloud Native</span>
+</div>
+</div>
+<!-- Web Apps -->
+<div class="md:col-span-4 bg-white p-stack-md rounded-xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">language</span>
+</div>
+<h3 class="font-h3 text-on-surface mb-4">Progressive Web Apps</h3>
+<p class="font-body-sm text-on-surface-variant">High-speed, responsive web experiences that bridge the gap between browser and native app functionality.</p>
+</div>
+<!-- Mobile Apps -->
+<div class="md:col-span-4 bg-white p-stack-md rounded-xl border border-outline-variant hover:shadow-md transition-shadow">
+<div class="w-12 h-12 bg-tertiary-container/30 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-tertiary-container">smartphone</span>
+</div>
+<h3 class="font-h3 text-on-surface mb-4">Mobile Ecosystems</h3>
+<p class="font-body-sm text-on-surface-variant">Native iOS and Android development alongside cross-platform solutions that don't compromise on fluidity.</p>
+</div>
+<!-- Enterprise Systems -->
+<div class="md:col-span-8 bg-on-background p-stack-md rounded-xl border border-outline text-white flex items-center justify-between overflow-hidden relative">
+<div class="relative z-10">
+<h3 class="font-h3 text-inverse-primary mb-4">Enterprise Systems &amp; ERP</h3>
+<p class="font-body-md opacity-80 max-w-md mb-6">Secure, scalable, and data-driven platforms for enterprise resource planning and complex business workflows. Built with a focus on reliability.</p>
+<button class="text-primary-fixed-dim flex items-center gap-2 font-bold hover:underline">
+              Request Technical Specifications <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<div class="hidden lg:block opacity-20 absolute -right-10">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'wght' 200;">settings_suggest</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Methodology / Tech Expertise -->
+<section class="bg-surface-container py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end gap-stack-md mb-stack-lg">
+<div class="max-w-2xl">
+<span class="font-label-caps text-primary mb-4 block">OUR APPROACH</span>
+<h2 class="font-h2 text-on-surface">The Precision-First Methodology</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-sm">We don't just write code; we engineer value through a rigorous four-stage deployment cycle.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="relative p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<div class="text-h1 font-display opacity-10 absolute top-4 right-4">01</div>
+<h4 class="font-h3 text-primary mb-2">Discovery</h4>
+<p class="font-body-sm text-on-surface-variant">Technical requirement gathering and architecture blueprinting tailored to business goals.</p>
+</div>
+<div class="relative p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<div class="text-h1 font-display opacity-10 absolute top-4 right-4">02</div>
+<h4 class="font-h3 text-primary mb-2">Sprint Dev</h4>
+<p class="font-body-sm text-on-surface-variant">Agile development cycles with continuous integration and real-time stakeholder transparency.</p>
+</div>
+<div class="relative p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<div class="text-h1 font-display opacity-10 absolute top-4 right-4">03</div>
+<h4 class="font-h3 text-primary mb-2">Rigorous QA</h4>
+<p class="font-body-sm text-on-surface-variant">Automated testing, security audits, and performance stress tests ensuring industrial stability.</p>
+</div>
+<div class="relative p-6 bg-white rounded-xl border border-outline-variant shadow-sm">
+<div class="text-h1 font-display opacity-10 absolute top-4 right-4">04</div>
+<h4 class="font-h3 text-primary mb-2">Deployment</h4>
+<p class="font-body-sm text-on-surface-variant">Zero-downtime deployment and 24/7 post-launch technical support and monitoring.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials & Client Logos -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<span class="font-label-caps text-secondary mb-4 block">TRUSTED BY INDUSTRY LEADERS</span>
+<div class="flex flex-wrap justify-center items-center gap-12 opacity-50 grayscale">
+<div class="font-display text-h3 font-extrabold tracking-tighter">TECHCORP</div>
+<div class="font-display text-h3 font-extrabold tracking-tighter">GLOBAL_LOGISTICS</div>
+<div class="font-display text-h3 font-extrabold tracking-tighter">VIRTUAL_SYSTEMS</div>
+<div class="font-display text-h3 font-extrabold tracking-tighter">QUANTUM_MEDIA</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-gutter">
+<div class="bg-white p-8 rounded-xl border-l-4 border-primary shadow-sm italic text-on-surface-variant relative">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary opacity-20 text-4xl">format_quote</span>
+<p class="font-body-lg mb-6">"HenryTic transformed our outdated legacy infrastructure into a cloud-native powerhouse. Their attention to technical detail is unmatched in the Caribbean market."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 bg-surface-container rounded-full overflow-hidden">
+<!-- User avatar placeholder -->
+<div class="bg-primary-container w-full h-full flex items-center justify-center text-on-primary-container font-bold">JD</div>
+</div>
+<div>
+<p class="font-bold text-on-surface">James Donovan</p>
+<p class="font-body-sm text-on-surface-variant">CTO, Global Logistics Group</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-8 rounded-xl border-l-4 border-primary shadow-sm italic text-on-surface-variant relative">
+<span class="material-symbols-outlined absolute top-4 right-4 text-primary opacity-20 text-4xl">format_quote</span>
+<p class="font-body-lg mb-6">"The integration between their custom software and our onsite hardware was seamless. They are our go-to partner for all complex engineering projects."</p>
+<div class="flex items-center gap-4 not-italic">
+<div class="w-12 h-12 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-secondary-container w-full h-full flex items-center justify-center text-on-secondary-container font-bold">SM</div>
+</div>
+<div>
+<p class="font-bold text-on-surface">Sarah Miller</p>
+<p class="font-body-sm text-on-surface-variant">Operations Director, TechCorp</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="mb-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-primary rounded-2xl p-stack-lg text-center text-white relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<!-- Geometric Pattern Overlay -->
+<svg height="100%" width="100%" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="grid" patternunits="userSpaceOnUse" width="40">
+<path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1"></path>
+</pattern>
+</defs>
+<rect fill="url(#grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<h2 class="font-display text-display mb-6 relative z-10">Ready to build the future?</h2>
+<p class="font-body-lg mb-8 max-w-2xl mx-auto opacity-90 relative z-10">Connect with our engineering team today to discuss your software architecture needs and receive a comprehensive technical proposal.</p>
+<button class="bg-white text-primary px-10 py-4 rounded-lg font-bold text-body-lg hover:bg-surface-container-high transition-colors relative z-10">
+          Schedule a Consultation
+        </button>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-2">
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+</div>
+<p class="font-body-sm opacity-80 pr-8">© 2024 Inversiones Tecnológicas Henry (HenryTic). Precision in software, hardware, and audiovisual excellence. Delivering high-fidelity solutions for the enterprise sector.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-inverse-primary font-bold">Services</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">Software Development</a>
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">Hardware Catalog</a>
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">AV Productions</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-inverse-primary font-bold">Legal &amp; Support</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-sm opacity-80 hover:opacity-100 hover:text-inverse-primary transition-colors" href="#">Technical Support</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Design System -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us | HenryTic - Precision Technology Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-primary-container": "#004361",
+                    "outline": "#6e7882",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4851",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "tertiary-container": "#a2abb1",
+                    "inverse-surface": "#213145",
+                    "primary": "#006591",
+                    "primary-container": "#00b4ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#374044",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary": "#576065",
+                    "outline-variant": "#bdc8d2",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#55637d",
+                    "on-primary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#141d21",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#515f78",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-container": "#d2e0fe",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#006591",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "display": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #00b4ff;
+            box-shadow: 0 0 0 2px rgba(0, 180, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" data-alt="A professional and sleek corporate logo for HenryTic, featuring a minimalist combination of hardware circuitry patterns and software code brackets. The primary colors are sky blue and deep navy on a crisp white background. The design is presented in a flat vector style with high-tech typography that conveys precision and reliability in engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Software</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Hardware</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Audiovisual</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded hover:bg-on-primary-container transition-all active:scale-95 duration-100 font-bold">
+                Get a Quote
+            </button>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Hero Section -->
+<section class="mb-stack-lg">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest">CONNECT WITH EXPERTS</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-4">Precision solutions start with a conversation.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Whether you're looking for enterprise software development, professional hardware procurement, or high-fidelity audiovisual production, our team is ready to engineer your success.</p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Contact Form Section -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-8 md:p-12 rounded-xl border border-outline-variant shadow-sm">
+<h2 class="font-h2 text-h2 mb-8">Project Inquiry</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Full Name</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Email Address</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface" placeholder="john@enterprise.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Inquiry Type</label>
+<select class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface appearance-none">
+<option>Software Development</option>
+<option>Hardware Procurement &amp; Catalog</option>
+<option>Audiovisual &amp; Media Production</option>
+<option>Enterprise Consulting</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Project Details</label>
+<textarea class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface resize-none" placeholder="Describe your technical requirements or project scope..." rows="5"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-lg font-bold text-body-lg shadow-md hover:shadow-lg hover:bg-on-primary-container transition-all active:scale-95" type="submit">
+                            Submit Request
+                        </button>
+</div>
+</form>
+</div>
+<!-- Info & Social Column -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Info Cards -->
+<div class="grid grid-cols-1 gap-gutter">
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant flex gap-6 items-start">
+<div class="bg-primary-container p-3 rounded-lg text-on-primary-container">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-2">Office Headquarters</h3>
+<p class="text-on-surface-variant">Calle Tecnológica 124, Nivel 4<br/>Distrito de Innovación, 10112</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant flex gap-6 items-start">
+<div class="bg-primary-container p-3 rounded-lg text-on-primary-container">
+<span class="material-symbols-outlined text-3xl">call</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-2">Direct Contact</h3>
+<p class="text-on-surface-variant">+1 (829) 555-0192<br/>contact@henrytic.com</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-8 rounded-xl border border-outline-variant">
+<h3 class="font-h3 text-h3 mb-6">Connect With Us</h3>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">developer_mode</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">podcasts</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Section -->
+<section class="mt-stack-lg rounded-2xl overflow-hidden h-[450px] relative border border-outline-variant shadow-lg">
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<div class="text-center p-8 bg-surface/90 backdrop-blur-md rounded-xl shadow-xl max-w-md z-10 mx-4 border border-outline-variant">
+<span class="material-symbols-outlined text-5xl text-primary mb-4" data-weight="fill">map</span>
+<h3 class="font-h3 text-h3 mb-2">Find Us</h3>
+<p class="text-on-surface-variant mb-6">Visit our innovation hub for a personalized consultation on your software and hardware needs.</p>
+<button class="bg-on-surface text-surface px-6 py-2 rounded font-bold hover:bg-primary transition-colors">Open in Google Maps</button>
+</div>
+<!-- Placeholder Map Texture -->
+<div class="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl62CPkMRmqYox7nzeU7lL3hXAf6CmRA4f6Ng-dhT1b2_TG_3E4s3NkWAh26z3zHZItnGra05_aYWwc1aBKPpS3FCeI11lAgYwxadbWlqpj1TpNXVxxym-Hm9t1Mz33uG1DqIwG5YbFL_bU1fxro3GJW3SC18VxECoxzUtGPNbRirhyoklkIxFR6J58SiFZLg0BrRD4TAlMr9IApbqgpFm9Lmx-8foqn8cO1kei21tK2bEF5Z4l4nmpKgDOVpXbQATgY9QJqeCwHw')"></div>
+<div class="absolute inset-0" data-location="Innovation District Headquarters" style="background-color: #e5eeff">
+<!-- This div represents the map area -->
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+<p class="font-body-sm text-body-sm text-surface-variant opacity-80">© 2024 Inversiones Tecnológicas Henry (HenryTic). Precision in software, hardware, and audiovisual excellence.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-inverse-primary dark:text-primary">SERVICES</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Software Development</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Hardware Catalog</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">AV Productions</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-inverse-primary dark:text-primary">LEGAL</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Contacto - HenryTic -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hardware &amp; Infrastructure | HenryTic</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-primary-container": "#004361",
+                    "outline": "#6e7882",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4851",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "tertiary-container": "#a2abb1",
+                    "inverse-surface": "#213145",
+                    "primary": "#006591",
+                    "primary-container": "#00b4ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#374044",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary": "#576065",
+                    "outline-variant": "#bdc8d2",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#55637d",
+                    "on-primary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#141d21",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#515f78",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-container": "#d2e0fe",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#006591",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "display": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .precision-border {
+            border: 1px solid rgba(110, 120, 130, 0.1);
+        }
+        .shadow-precision {
+            box-shadow: 0 4px 20px -4px rgba(13, 28, 50, 0.06);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 sticky z-50">
+<div class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" data-alt="A professional logo for a high-tech company named HenryTic. The design features a modern, minimalist icon combining geometric circuitry elements with a sleek sans-serif typeface. The color scheme is a sophisticated blend of sky blue and deep navy, set against a pristine white background. The overall aesthetic is clean, professional, and suggests technical excellence and precision engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<nav class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Software</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1" href="#">Hardware</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Audiovisual</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<button class="bg-primary text-on-primary font-h3 py-2 px-6 rounded-lg shadow-precision hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95 duration-100">
+                Get a Quote
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative bg-surface-container-low overflow-hidden py-24">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-stack-lg">
+<div class="z-10">
+<span class="font-label-caps text-primary mb-4 block">PREMIUM CATALOG</span>
+<h1 class="font-display text-display text-on-surface mb-6">Hardware &amp; Infrastructure.</h1>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-xl">
+                        Power your enterprise with precision-engineered hardware. From high-performance workstations to mission-critical networking infrastructure, HenryTic delivers the technical backbone of modern business.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-body-md px-8 py-4 rounded-lg shadow-precision font-bold hover:translate-y-[-2px] transition-transform">
+                            Explore Catalog
+                        </button>
+<button class="border-2 border-primary text-primary font-body-md px-8 py-4 rounded-lg font-bold hover:bg-primary-container/10 transition-colors">
+                            Technical Specs
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-precision">
+<img class="w-full h-full object-cover" data-alt="A high-tech server room with glowing blue LED lights reflecting off brushed metal surfaces and glass panels. The scene showcases rows of server racks organized with extreme precision, symbolizing enterprise-level reliability. The lighting is cold, professional, and focused, creating a futuristic and secure atmosphere. Soft atmospheric fog creates depth, highlighting the sophisticated hardware components in a clean, clinical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRziISW-cQccwhOB5KWndYvPAbzBnVQOAd-u6q9cxOm4gBvWT4QhvsEXMjbIZYdONU4Nhrl6gMHp2xQJPqy6oOsFvHVyPn1LfGO50dMqY3JUIZN8KZbS34w8U5eral3-PUhn_dLv13H1K_hMyQoRM1GgTSkH9IAWKSTEFWwiEdFSkkDDuvYJ5ruGbSzV1_FWfaWDrcXpxfRAp0W1HtSQDgV3d7MtSUPsjXHiYNwzI-owbIRExaWuv85v_yTXiLFJ5SjUCfPvHfqBk"/>
+</div>
+<!-- Floating Badge -->
+<div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-precision border border-outline-variant max-w-[240px]">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-weight="fill">verified</span>
+<span class="font-label-caps text-on-surface">Tier 1 Certified</span>
+</div>
+<p class="text-body-sm text-on-surface-variant">Guaranteed performance for enterprise workloads.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Filters & Search -->
+<section class="bg-white sticky top-20 z-40 border-b border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-4 flex flex-wrap items-center justify-between gap-4">
+<div class="flex items-center gap-2 overflow-x-auto pb-2 md:pb-0 scrollbar-hide">
+<button class="bg-primary-container text-on-primary-container px-4 py-2 rounded-full font-label-caps whitespace-nowrap">All Hardware</button>
+<button class="hover:bg-surface-container-high px-4 py-2 rounded-full font-label-caps transition-colors whitespace-nowrap">Processors</button>
+<button class="hover:bg-surface-container-high px-4 py-2 rounded-full font-label-caps transition-colors whitespace-nowrap">Monitors</button>
+<button class="hover:bg-surface-container-high px-4 py-2 rounded-full font-label-caps transition-colors whitespace-nowrap">Networking</button>
+<button class="hover:bg-surface-container-high px-4 py-2 rounded-full font-label-caps transition-colors whitespace-nowrap">Servers</button>
+<button class="hover:bg-surface-container-high px-4 py-2 rounded-full font-label-caps transition-colors whitespace-nowrap">Storage</button>
+</div>
+<div class="relative w-full md:w-auto">
+<input class="w-full md:w-64 bg-surface border-outline-variant rounded-lg pl-10 pr-4 py-2 focus:ring-primary focus:border-primary" placeholder="Search equipment..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+</div>
+</div>
+</section>
+<!-- Office Tech Section -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex items-end justify-between mb-12">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface">Office Tech</h2>
+<p class="text-on-surface-variant mt-2">Precision instruments for professional productivity.</p>
+</div>
+<a class="text-primary font-bold flex items-center gap-1 hover:underline" href="#">
+                    View all Office <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- CPU Card -->
+<div class="bg-white rounded-xl precision-border shadow-precision group hover:translate-y-[-4px] transition-all overflow-hidden">
+<div class="aspect-video relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A close-up macro shot of a state-of-the-art computer processor with intricate silicon pathways and metallic pins. The lighting is bright and technical, with sky blue reflections highlighting the precise engineering. The background is a clean, neutral white, emphasizing the complexity and power of the hardware component. The image conveys a sense of high-end computational performance and modern technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZypJMiqT4euvu5hpZfOoRTCUILJnGuqtNS3YOt_Aqw-XA4OShHPAjCQQT4HpaHQVsE-9Dc13fkopWLzKZM1rpHV3IPlBaz0WGxXpfgkICJek6Q2a2uJmpC0AXeJF_YIIfcYUN3iE3oXaYkaJuJe4_DoLV0VgIah_kWLv-dNXyhRXmKzIvLYaN3c7GfgkSr0rFIaxfvQSKAhTg0w4QUeJfaGqqNRZ3vOHNiFEWto1ih9bxT3RsVakXQf4g3da9N26CtP8irbsrNCw"/>
+<span class="absolute top-3 left-3 bg-primary text-white font-label-caps px-2 py-1 rounded">SPECS</span>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-on-surface mb-2">HenryPro X1 Gen 4</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">16-Core, 5.2GHz processing power for intensive multitasking.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-h3 text-primary">$499.00</span>
+<button class="bg-surface-container-high p-2 rounded-lg text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Monitor Card -->
+<div class="bg-white rounded-xl precision-border shadow-precision group hover:translate-y-[-4px] transition-all overflow-hidden">
+<div class="aspect-video relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A professional ultra-wide 4K monitor displaying vibrant color calibration charts and high-resolution digital art. The monitor has a sleek, nearly borderless design with a premium brushed aluminum stand. It is positioned on a minimalist white desk in a brightly lit, modern office environment. The lighting is soft and even, highlighting the screen's clarity and wide color gamut. The overall aesthetic is clean, professional, and visually stunning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn6ZimOskXTgTIsvvgXMCTpVQ4vkOVjhB8Iz_hBT2Pi4_hJkdZDL-4fcDvjMC58AMkSMvRmKActA6oWdLy1Hp_LlbFzkpuUCSBBNDWoussU2g_JLqfADbKoHFwJsWXhfxgC68Yq9ScnKgEjWFukjtNDf9yRJ5coNbvTf9ywMTpqYiu3Ux4jMwlI1-CcMCdPaDbF3S3q9wLDncoAoJRuSetFw6hHrNiSZC2k-zPSJwalW6Uf2xsZB4ro8g3Tstzdrzxemo6m9QaLQU"/>
+<span class="absolute top-3 left-3 bg-primary text-white font-label-caps px-2 py-1 rounded">SPECS</span>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-on-surface mb-2">VistaClear 32" 4K</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">99% sRGB coverage with HDR10 for professional designers.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-h3 text-primary">$720.00</span>
+<button class="bg-surface-container-high p-2 rounded-lg text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Peripherals Card -->
+<div class="bg-white rounded-xl precision-border shadow-precision group hover:translate-y-[-4px] transition-all overflow-hidden">
+<div class="aspect-video relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A sleek mechanical keyboard with programmable RGB lighting set to a soft sky blue glow. The keys are made of high-quality matte black plastic, and the body is constructed from solid aircraft-grade aluminum. It is shown in a professional work setting with clean white surfaces. The image focus is sharp on the key texture, conveying tactile precision and premium build quality suited for professional engineering tasks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARUs5c9rjKBf2dhH8MKlMlXFF7PngWe_CutWGcCN67NgEIGkaqLFcimykyd_nmsO4AuJJGQbIOTSKzSivzD-nvTD3UYbeoM8tcEfbWbe_IjQfLUvUmZ-5Wzo8WPBi2ybHZqtGjc7MXNUxn8B6GklIIdxf0662UIvIzy7aCmYExo96fab-msrFcg_XRyiFHl3bdju3kwLu3bQhxFaNtCoQvNp6X0lLFuoxX1cn3Jx8PXqCRWGxBR1vdNx8_uNOLTmSjKUr5doRprTc"/>
+<span class="absolute top-3 left-3 bg-primary text-white font-label-caps px-2 py-1 rounded">SPECS</span>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-on-surface mb-2">Tactile-Flow KB</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Low-profile mechanical switches for ergonomic precision.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-h3 text-primary">$189.00</span>
+<button class="bg-surface-container-high p-2 rounded-lg text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Workstation Card -->
+<div class="bg-white rounded-xl precision-border shadow-precision group hover:translate-y-[-4px] transition-all overflow-hidden">
+<div class="aspect-video relative overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A compact professional workstation desktop with a transparent side panel showing perfectly managed internal cabling and custom liquid cooling components. The coolant glows with a subtle blue hue, matching the HenryTic brand colors. The setting is a minimalist tech studio with bright, diffuse lighting that creates soft shadows. The shot emphasizes high-performance computing power in a refined and elegant form factor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFUAwUi3hi6plXjHEcgcEnHJe5ZhTQNjdb6w_coABqlhcro-TW3fwckR5EPU2S7ZJ6MB6OLxLWWgvy3lvS1rsLlID9Am5NZyJKKQ2ebo2dRtNCG2TXXWI1eUZQmOFinUO6aLNHlHdGMCn4ZM0TUlE6ukKLOahLvtXYGCyxszcvGd3WJxzaUvYk7gGPNG7-XOmH52xfSUvE1EkbGrrHh__wHIJFoLZBeJ6mkA5LzkCY81gFCLE0ZZ2pHJ7d7ZemQbwbix0j6zXhgwg"/>
+<span class="absolute top-3 left-3 bg-primary text-white font-label-caps px-2 py-1 rounded">SPECS</span>
+</div>
+<div class="p-6">
+<h3 class="font-h3 text-on-surface mb-2">HT-Workstation Pro</h3>
+<p class="text-body-sm text-on-surface-variant mb-4">Customized builds for video editing and 3D rendering.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-h3 text-primary">From $1,200</span>
+<button class="bg-surface-container-high p-2 rounded-lg text-primary hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Enterprise Infrastructure Bento Section -->
+<section class="bg-on-background py-stack-lg text-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center justify-between mb-12">
+<div>
+<span class="font-label-caps text-primary-container mb-2 block">ENTERPRISE SOLUTIONS</span>
+<h2 class="font-h1 text-h1">Infrastructure Excellence</h2>
+</div>
+<button class="bg-white text-on-background px-6 py-3 rounded-lg font-bold hover:bg-primary-container transition-colors">
+                        Request Site Survey
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Large Bento Card: Servers -->
+<div class="md:col-span-2 bg-surface-container-highest/10 rounded-2xl p-8 border border-white/10 flex flex-col md:flex-row gap-8 items-center overflow-hidden relative">
+<div class="z-10 flex-1">
+<h3 class="font-display text-h2 mb-4">Scalable Server Clusters</h3>
+<p class="text-surface-variant mb-6 text-body-lg">Deployment-ready blade servers and rack-mount configurations designed for 99.999% uptime and thermal efficiency.</p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">check_circle</span> Dual Redundant Power Units</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">check_circle</span> Hot-Swap NVMe Bays</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-container">check_circle</span> Integrated AI Accelerators</li>
+</ul>
+<button class="bg-primary text-white px-8 py-3 rounded-lg font-bold">Configure Rack</button>
+</div>
+<div class="flex-1 w-full h-full min-h-[300px] rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A professional vertical shot of an enterprise-grade server rack with glowing indicator lights in blue and green. The rack is filled with high-density storage modules and network switches with neatly bundled cables. The aesthetic is extremely technical and structured, with reflective glass and metal surfaces. The lighting emphasizes the depth and complexity of a modern data center environment, conveying security and robust performance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJHuZxerXiV538E0z36o2Lk9_ZTGh96eoWDzTjLqyWj1_nsp1BsOY6UEiKLcAsvyC2ICdCUadGYlqCjye-823v7N47e4LNMeSHwb6Wok511kd2NozYjwBQqYtdLd3JFiBANyEVR2CGDQGwSePHivyOrHAjeyq9ww3JQ5uX5k6uzs7W0WAl_7ul3dnCndvxCxdWxrh0T0gvu-kU58q0lnTsn3PFWJasQm6Zlvc3wozvTV7Nx5q4yEqJzd-XgsC-4KngiToWKNi977M"/>
+</div>
+</div>
+<!-- Small Bento Card: Networking -->
+<div class="bg-primary rounded-2xl p-8 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-white text-4xl mb-6">hub</span>
+<h3 class="font-h2 text-h2 mb-4">Core Switching</h3>
+<p class="text-primary-fixed text-body-md">Ultra-low latency 100GbE switches for high-bandwidth internal networks.</p>
+</div>
+<div class="mt-8">
+<img class="w-full h-40 object-cover rounded-lg mb-4 opacity-80" data-alt="A high-performance network switch with multiple fiber optic ports, each illuminated by a soft cyan indicator light. Patch cables are perfectly organized, demonstrating professional infrastructure management. The dark background emphasizes the glowing status lights, creating a high-tech, mission-critical visual style. The image highlights the speed and connectivity essential for modern enterprise networking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPSMR2s1ayJ-bnMveYh-D3nDjF20lwPF_Jw4k0s37nkU2ATJLjm0RD8IPxHpV3dO2gGmCHf02a-oBaAnkfUcgJPaSIcndS65G_sQa-6m02xsjqubWNoK54PQNYxZC0Lz6FtBQOEyuIss5R8H5vU56S9SXFK43Q7wX59hXUufesC7BkOiAtDTWxT4OmwTAimz4JGe-Jmu8X7X7D-F7qEY7lKRo08vxR4jBIwzCJWoFnB2UOAhccVE64kU6L43FkjS-pW2m3heOx9qs"/>
+<a class="text-white font-bold flex items-center justify-between" href="#">
+                                Browse Models <span class="material-symbols-outlined">chevron_right</span>
+</a>
+</div>
+</div>
+<!-- Row of 3 specialized infrastructure items -->
+<div class="bg-white text-on-background rounded-2xl p-6 shadow-precision flex items-center gap-6">
+<div class="bg-surface-container rounded-lg p-4">
+<span class="material-symbols-outlined text-primary text-3xl">router</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Border Gateways</h4>
+<p class="text-body-sm text-on-surface-variant">Secure hardware firewalls.</p>
+</div>
+</div>
+<div class="bg-white text-on-background rounded-2xl p-6 shadow-precision flex items-center gap-6">
+<div class="bg-surface-container rounded-lg p-4">
+<span class="material-symbols-outlined text-primary text-3xl">storage</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">NAS/SAN Units</h4>
+<p class="text-body-sm text-on-surface-variant">High-capacity storage arrays.</p>
+</div>
+</div>
+<div class="bg-white text-on-background rounded-2xl p-6 shadow-precision flex items-center gap-6">
+<div class="bg-surface-container rounded-lg p-4">
+<span class="material-symbols-outlined text-primary text-3xl">battery_charging_full</span>
+</div>
+<div>
+<h4 class="font-bold text-lg">Smart UPS</h4>
+<p class="text-body-sm text-on-surface-variant">Uninterruptible power protection.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Specs Table Section -->
+<section class="py-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<h2 class="font-h2 text-h2 text-on-surface mb-8">Hardware Compatibility Matrix</h2>
+<div class="overflow-x-auto rounded-xl border border-outline-variant">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-on-background text-white font-display">
+<th class="p-4 border-r border-white/10">Hardware Model</th>
+<th class="p-4 border-r border-white/10">Workload Profile</th>
+<th class="p-4 border-r border-white/10">Base Config</th>
+<th class="p-4">Warranty</th>
+</tr>
+</thead>
+<tbody class="font-body-sm">
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold">HT-Blade Gen 4</td>
+<td class="p-4">Virtualization / AI</td>
+<td class="p-4">128GB RAM / 2TB NVMe</td>
+<td class="p-4 text-primary">5 Year On-Site</td>
+</tr>
+<tr class="bg-surface-container-low border-b border-outline-variant hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold">NetSwitch 9000</td>
+<td class="p-4">Core Aggregation</td>
+<td class="p-4">48-port 10GbE / 4x 100G</td>
+<td class="p-4 text-primary">Lifetime Limited</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors">
+<td class="p-4 font-bold">Workstation Pro X</td>
+<td class="p-4">Creative / Engineering</td>
+<td class="p-4">64GB RAM / RTX 4000</td>
+<td class="p-4 text-primary">3 Year Support</td>
+</tr>
+<tr class="bg-surface-container-low hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-bold">StoreVault NAS</td>
+<td class="p-4">Enterprise Backup</td>
+<td class="p-4">12-Bay / Hot Swap</td>
+<td class="p-4 text-primary">5 Year Support</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="mb-stack-lg max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary-container rounded-3xl p-12 text-center flex flex-col items-center">
+<h2 class="font-display text-display text-on-primary-container mb-6">Need a custom hardware audit?</h2>
+<p class="text-body-lg text-on-primary-container/80 mb-10 max-w-2xl">Our engineers specialize in designing bespoke infrastructure tailored to your operational scale. Let us architect your next-generation tech stack.</p>
+<div class="flex gap-4">
+<button class="bg-on-primary-container text-white px-10 py-4 rounded-xl font-bold shadow-precision hover:scale-105 transition-transform">Consult an Engineer</button>
+<button class="bg-white text-primary px-10 py-4 rounded-xl font-bold shadow-precision hover:bg-surface-container-low transition-colors">Download Catalog (PDF)</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div>
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface block mb-6">HenryTic</span>
+<p class="text-surface-variant opacity-80 text-body-sm leading-relaxed mb-8">
+                    Defining the standard for technological integration. We bridge the gap between complex hardware demands and high-performance software execution.
+                </p>
+<div class="flex gap-4">
+<a class="text-inverse-primary hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-inverse-primary hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">terminal</span></a>
+<a class="text-inverse-primary hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">settings</span></a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-8 md:col-span-2">
+<div>
+<h4 class="font-label-caps text-inverse-primary mb-6">SERVICES</h4>
+<ul class="space-y-4 font-body-sm">
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Software Development</a></li>
+<li><a class="text-inverse-primary font-bold" href="#">Hardware Catalog</a></li>
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">AV Productions</a></li>
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Infrastructure Audit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-inverse-primary mb-6">LEGAL</h4>
+<ul class="space-y-4 font-body-sm">
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Shipping Information</a></li>
+<li><a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Global Support</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-white/10 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<p class="text-surface-variant opacity-60 text-body-sm text-center">
+                © 2024 Inversiones Tecnológicas Henry (HenryTic). Precision in software, hardware, and audiovisual excellence.
+            </p>
+</div>
+</footer>
+</body></html>
+
+<!-- Logo HenryTic -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface": "#f8f9ff",
+                      "on-primary-container": "#004361",
+                      "outline": "#6e7882",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#dce9ff",
+                      "on-surface-variant": "#3e4851",
+                      "on-surface": "#0b1c30",
+                      "inverse-primary": "#89ceff",
+                      "tertiary-fixed": "#dbe4ea",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#b9c7e4",
+                      "tertiary-container": "#a2abb1",
+                      "inverse-surface": "#213145",
+                      "primary": "#006591",
+                      "primary-container": "#00b4ff",
+                      "primary-fixed-dim": "#89ceff",
+                      "surface-bright": "#f8f9ff",
+                      "surface-container": "#e5eeff",
+                      "on-secondary-fixed-variant": "#39475f",
+                      "on-tertiary-container": "#374044",
+                      "background": "#f8f9ff",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "surface-variant": "#d3e4fe",
+                      "tertiary": "#576065",
+                      "outline-variant": "#bdc8d2",
+                      "secondary-fixed": "#d6e3ff",
+                      "on-error-container": "#93000a",
+                      "on-secondary-container": "#55637d",
+                      "on-primary-fixed": "#001e2f",
+                      "on-tertiary-fixed-variant": "#3f484d",
+                      "tertiary-fixed-dim": "#bfc8ce",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-fixed": "#141d21",
+                      "on-background": "#0b1c30",
+                      "surface-container-highest": "#d3e4fe",
+                      "on-primary-fixed-variant": "#004c6e",
+                      "secondary": "#515f78",
+                      "surface-container-low": "#eff4ff",
+                      "primary-fixed": "#c9e6ff",
+                      "secondary-container": "#d2e0fe",
+                      "on-secondary-fixed": "#0d1c32",
+                      "surface-tint": "#006591",
+                      "surface-dim": "#cbdbf5",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-sm": "8px",
+                      "stack-md": "24px",
+                      "container-max": "1280px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "stack-lg": "48px",
+                      "unit": "8px",
+                      "margin-desktop": "48px"
+              },
+              "fontFamily": {
+                      "h1": ["Space Grotesk"],
+                      "body-lg": ["Manrope"],
+                      "display": ["Space Grotesk"],
+                      "h2": ["Space Grotesk"],
+                      "body-md": ["Manrope"],
+                      "body-sm": ["Manrope"],
+                      "h3": ["Space Grotesk"],
+                      "label-caps": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .precision-gradient {
+            background: linear-gradient(135deg, #006591 0%, #004361 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopAppBar Section -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-3">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" data-alt="A professional logo for a high-tech company named HenryTic. The emblem is modern and minimalist, showcasing a stylized combination of digital circuit patterns and a sleek camera lens, representing software and audiovisual excellence. The color scheme is a sophisticated blend of sky blue, navy blue, and crisp white, presented on a clean, bright background. The design is sharp and geometric, reflecting precision and technical reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Software</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Hardware</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Audiovisual</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-md font-bold hover:bg-primary-container hover:text-on-primary-container transition-all active:scale-95 duration-100 shadow-sm">
+                Get a Quote
+            </button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[80vh] flex items-center overflow-hidden bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center py-stack-lg">
+<div class="z-10">
+<span class="font-label-caps text-label-caps text-primary tracking-widest bg-surface-container-high px-3 py-1 rounded mb-stack-sm inline-block">ENGINEERING EXCELLENCE</span>
+<h1 class="font-display text-display text-on-surface mb-stack-md">Precision in Every Digital <span class="text-primary">Dimension.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg max-w-xl">
+                        At HenryTic, we merge software innovation, robust hardware solutions, and high-fidelity audiovisual production into a single ecosystem of technical excellence.
+                    </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-h3 hover:bg-on-primary-container transition-all shadow-md">
+                            Explore Solutions
+                        </button>
+<button class="border-2 border-primary text-primary px-8 py-4 rounded-lg font-h3 hover:bg-primary-fixed transition-all">
+                            View Portfolio
+                        </button>
+</div>
+</div>
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden shadow-2xl border border-outline-variant bg-surface">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-transparent"></div>
+<div class="h-full w-full flex items-center justify-center p-stack-lg">
+<!-- Visual representation of the three pillars -->
+<div class="grid grid-cols-2 grid-rows-2 gap-4 w-full h-full">
+<div class="col-span-1 row-span-2 bg-surface-container-highest rounded-xl p-6 flex flex-col justify-end border border-outline-variant" data-alt="A close-up, high-definition photograph of complex server architecture in a modern data center. The scene is bathed in a cool, deep navy and sky blue light, emphasizing technical precision and high-tech engineering. Subtle glowing blue LED indicators suggest active data processing. The atmosphere is professional, clean, and highly sophisticated, reflecting the software and hardware core of HenryTic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC0eKMtUIrEL52lQyBbuxlUaSSMoTC4tBwXRTGD3aHFCsH0wFBEycCicCsZJi7oxOj2sj5GvAQB3FRyKPHpd9o6ucU4acB6RJ70ZfFLjLStM7gvzeHDiimbmUcl__wgr5M8zy0P5lOc56bAcEEqWtK2dOaOxDK-4lEE1Rc83jX3kw-wp_8xDjyRLuXuLujJdVVM0iXrXleQl8P-p68_9Bljr2To_UvIj4qGUG8MQEyh7a_oZXJ_4debUL16B7Ohp2EQIobSBrqAruE'); background-size: cover;">
+<div class="bg-on-surface/80 backdrop-blur-md p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary-container mb-2">terminal</span>
+<h3 class="text-white font-h3">Software</h3>
+</div>
+</div>
+<div class="bg-surface-container-high rounded-xl p-6 flex flex-col justify-end border border-outline-variant" data-alt="A detailed shot of a high-performance circuit board with gold and silver soldering points gleaming under professional studio lighting. The aesthetic is extremely clean and high-definition, with a shallow depth of field focusing on a central processor. The color palette features metallic tones and deep navy blue shadows, conveying a sense of hardware reliability and industrial excellence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA_t3lQNvrTAyTOm1EfFk34ghkjsVqCSaD3ESeZCz42whC1v4btKVCBvmuK64Ua5Vo6R0dUh9wn-aDaX6LTGKWSP32E50txDO6l-6vzJuJrJYyeXhXFtiY6Mg4bpOS1a7j87mdsZ3gIk0PRhvVE5MzUB2_29eEOfL5mxS42RPPLNj74GtFA1te1aozeTohMUOhT6j49OE0wCg6ypaVOmWmF18rpFKYpx-g60nbYOWajr9MNd4hw0OBmBHiZYFRleEIpcHWiyisSEk8'); background-size: cover;">
+<div class="bg-on-surface/80 backdrop-blur-md p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary-container mb-2">memory</span>
+<h3 class="text-white font-h3">Hardware</h3>
+</div>
+</div>
+<div class="bg-surface-container-highest rounded-xl p-6 flex flex-col justify-end border border-outline-variant" data-alt="A professional cinema camera mounted on a stabilization rig in a high-tech studio environment. The lighting is crisp and controlled, with soft blue rim lighting that defines the sleek curves of the equipment. The background is a minimalist, out-of-focus production set. This image represents the audiovisual excellence of HenryTic, utilizing a modern, corporate high-tech visual style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCDfjnXLhnqAXXiAHp364f1KvNHiLxuh4B6x6lCZXSyW3WCtui9N0q6N7FvjZLk2hL6MXUgup1ptHNGDz726Yqw-TCEvasXHz5QerLv7N_hWzuw3lVnWNSA36qmybSInpm0Z87gkqxszOHpEb8J6IaMFYhc0hUJ6154m4I38bXjBU1toyRh5NZh3BWoeFwA0zOhOSD2zJCuyubrGaV3UbTE4Kll_kY0o8WkY8GXmYgs40bYachpxSeOeUaiddD_EsHmSquO0FRvOvI'); background-size: cover;">
+<div class="bg-on-surface/80 backdrop-blur-md p-4 rounded-lg">
+<span class="material-symbols-outlined text-primary-container mb-2">videocam</span>
+<h3 class="text-white font-h3">Audiovisual</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Three Pillars Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-h1 text-h1 text-on-surface mb-stack-sm">Core Capabilities</h2>
+<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto">Providing a holistic approach to technology through three specialized business divisions.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Software Pillar -->
+<div class="group bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 precision-gradient rounded-lg flex items-center justify-center text-white mb-stack-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">code</span>
+</div>
+<h3 class="font-h2 text-h2 mb-stack-sm">Software Development</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Custom enterprise solutions, mobile ecosystems, and automated systems designed for scalability and performance.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Web Applications</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Cloud Infrastructure</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> AI Integrations</li>
+</ul>
+<a class="text-primary font-bold inline-flex items-center gap-1 group-hover:underline" href="#">Learn more <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Hardware Pillar -->
+<div class="group bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 precision-gradient rounded-lg flex items-center justify-center text-white mb-stack-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">developer_board</span>
+</div>
+<h3 class="font-h2 text-h2 mb-stack-sm">Hardware Systems</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">High-end computing hardware, network infrastructure, and specialized industrial technical equipment.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Server Deployment</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Network Security</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Custom Workstations</li>
+</ul>
+<a class="text-primary font-bold inline-flex items-center gap-1 group-hover:underline" href="#">Explore Catalog <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<!-- Audiovisual Pillar -->
+<div class="group bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant hover:border-primary hover:shadow-xl transition-all duration-300">
+<div class="w-16 h-16 precision-gradient rounded-lg flex items-center justify-center text-white mb-stack-md group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">movie</span>
+</div>
+<h3 class="font-h2 text-h2 mb-stack-sm">AV Productions</h3>
+<p class="text-on-surface-variant font-body-md mb-stack-md">Cinematic video production, high-fidelity sound engineering, and professional live stream installations.</p>
+<ul class="space-y-2 mb-stack-md">
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Corporate Video</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> Sound Design</li>
+<li class="flex items-center gap-2 text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm">check_circle</span> LED Wall Solutions</li>
+</ul>
+<a class="text-primary font-bold inline-flex items-center gap-1 group-hover:underline" href="#">See Our Work <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Bento Grid -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 grid-rows-2 gap-gutter min-h-[600px]">
+<div class="md:col-span-7 bg-white rounded-2xl border border-outline-variant p-stack-lg flex flex-col justify-center">
+<h2 class="font-h1 text-h1 text-on-surface mb-stack-md">Engineering Trust Since Inception</h2>
+<p class="text-on-surface-variant font-body-lg mb-stack-md leading-relaxed">
+                            HenryTic was founded on the principle that technology should be as reliable as the physics that power it. We don't just provide services; we engineer solutions that stand the test of high-stakes corporate environments.
+                        </p>
+<p class="text-on-surface-variant font-body-lg">
+                            Our team of developers, hardware technicians, and audiovisual creatives collaborate in a multidisciplinary environment to ensure every project benefits from a 360-degree technical perspective.
+                        </p>
+</div>
+<div class="md:col-span-5 bg-primary rounded-2xl p-stack-lg text-white flex flex-col justify-between" data-alt="A diverse team of technical professionals collaborating in a high-tech conference room. They are gathered around a sleek glass table featuring glowing holographic data visualizations and high-end hardware components. The setting is a modern glass-walled office with a view of a futuristic city skyline at dusk. The mood is focused and innovative, utilizing the brand's navy and sky blue color palette." style="background-image: linear-gradient(rgba(0, 101, 145, 0.9), rgba(0, 67, 97, 0.9)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuAzhNAjYMfDAjiwEFfyn47Qs7d1_QaDa0vaigJoapAG1Oz2Nud1KgszBR0l7AY5PWvgGVoUWlZkRAK99Z6Noi0Nu3WnYf0sOiK4gnqbjB1sB0paLP8Rykyxom6Y0YkgTup0nG9enlfCA97tmBLwf1FDXeHDdxmtEkfVHvot8-P1uyAKooI94--0C5Vm028NpkuLUPubyy-yfRuf-i3QIUMjZN8JxzP5hKSTXnprwIv3AaV-kLe1CcSj7KKnTLNGn67eJtucSJjOLH8'); background-size: cover;">
+<div>
+<h3 class="font-h2 text-h2 mb-4">Our Vision</h3>
+<p class="font-body-md opacity-90">To become the global standard for integrated technical excellence, where software, hardware, and media coexist in perfect harmony.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 mt-8">
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+<span class="text-h1 font-display block">150+</span>
+<span class="text-label-caps opacity-80 uppercase">Projects Delivered</span>
+</div>
+<div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg">
+<span class="text-h1 font-display block">99%</span>
+<span class="text-label-caps opacity-80 uppercase">Uptime Reliability</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 bg-surface-container-high rounded-2xl p-stack-md border border-outline-variant flex items-center justify-center text-center">
+<div>
+<span class="material-symbols-outlined text-primary text-5xl mb-4">verified</span>
+<h4 class="font-h3 text-h3 mb-2">Quality Certified</h4>
+<p class="text-on-surface-variant font-body-sm">Adhering to international engineering standards across all sectors.</p>
+</div>
+</div>
+<div class="md:col-span-8 bg-on-surface rounded-2xl p-stack-md overflow-hidden relative group">
+<img alt="Tech Workplace" class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="A wide-angle shot of a state-of-the-art technical laboratory. The space features clean white surfaces, ergonomic workstations with multiple high-resolution monitors, and racks of high-end hardware. Cool blue lighting accents the sleek, futuristic architecture of the room. The atmosphere is quiet, professional, and dedicated to high-level technical development and testing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFD8zZVHej3Pn_4M-zta4gFE1LhaLd7bcpeiCOrmfYDEW2VXG67VOD-t0_ZONlNnQVLBgIQ1tkPL6OyfFMvRh0qfJVMJsJMclfEnarMleoTeEECfJoSVkA-f4CbBQPkmiCADuAG8yfF7XOKBhb0x6IqwUH2w7a9cSaUyfRXkmxrIyTebDxpGJ9TiOhyLTccbP-CVFn8HGmXFr78pKTp25KJQgYFJ2KfcXnC1GgTWsJZ458MKfonOdvJFUv8nZcIdK8xxtnTZwjexQ"/>
+<div class="relative z-10 flex flex-col justify-end h-full">
+<h4 class="font-h2 text-h2 text-white mb-2">Innovation Lab</h4>
+<p class="text-white/70 max-w-md">Where we R&amp;D the next generation of HenryTic proprietary systems.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Carousel/Showcase Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<span class="font-label-caps text-label-caps text-primary mb-2 block uppercase tracking-widest">Solutions Spotlight</span>
+<h2 class="font-h1 text-h1 text-on-surface">Featured Projects</h2>
+</div>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border border-outline-variant flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 rounded-full border border-primary text-primary flex items-center justify-center hover:bg-primary-fixed transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex gap-gutter overflow-x-auto pb-8 snap-x no-scrollbar">
+<!-- Project Card 1 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-start group">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-stack-md shadow-md border border-outline-variant">
+<img alt="Software Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sophisticated dashboard interface displayed on a sleek, thin-bezel monitor. The UI features complex data visualizations, real-time analytics graphs, and a dark-mode theme with vibrant sky blue and neon cyan accents. The surrounding environment is a dim, high-tech workspace, emphasizing the clarity and professionalism of the software design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd6f-doK0qsU9Qzb030WApgxf4O075vkjM7xlCCSBPk4pyZldLD8MHatj1_nVh9z6uBFJjsC25AkH1U31TCqmC1d-QtBbihMY-yFG4-FgVpHp13lv3obb7iLKA8Bpzo4UGqIQL3-mq7l689g6Iv8g0uENJVTsAB2Dh5r4fYnVtYEWEQd77r0WhiFnkPc5FfIakneo9EOoc7vT6eo3LSmWke10ZdSitB_GFrj07XVksIcvqCYP1VSpmSxNEIz8zLK8fYHs32671hr4"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded shadow-lg uppercase">Software</span>
+</div>
+</div>
+<h4 class="font-h3 text-h3 mb-2">Omni-Channel Analytics Engine</h4>
+<p class="text-on-surface-variant font-body-md mb-4">A high-performance data processing platform built for a leading logistics enterprise.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Industry</span>
+<span class="font-bold">Logistics</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Tech</span>
+<span class="font-bold">Node.js / AWS</span>
+</div>
+</div>
+</div>
+<!-- Project Card 2 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-start group">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-stack-md shadow-md border border-outline-variant">
+<img alt="Hardware Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A professional-grade server rack installation inside a climate-controlled data center. The rack is meticulously organized with neat, color-coded sky blue cabling and illuminated by subtle status LEDs. The overall aesthetic is industrial yet extremely clean, showcasing the technical precision and care in HenryTic's hardware infrastructure deployments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaE3fLJW8IllwDewHlPd5-mDRUHd7wlMiAtRA7WK9_48EWCKtrEPjK9DJZvEe3C7M6Ht4r8rOTo5Qoe0uVSA3im01yBzvYYSdJt9-8wU9rNZjYNk5_MTGWKr6tOS6Rf8whH0_pKr4QegebmfRLSTK3NlLxl9STVuXsSb5fYAWmSO-uplleXm2vToMxFiFQwPvNoZB86f-hmvQcC77_RDAhk_cDPKvumIvsYvTaZWm6ONQMBVhqyngrmxXRA04UoU5ityhHzm1AMAI"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded shadow-lg uppercase">Hardware</span>
+</div>
+</div>
+<h4 class="font-h3 text-h3 mb-2">Enterprise Server Infrastructure</h4>
+<p class="text-on-surface-variant font-body-md mb-4">Custom hardware architecture and deployment for a multi-regional financial institution.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Industry</span>
+<span class="font-bold">Finance</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Scale</span>
+<span class="font-bold">Global</span>
+</div>
+</div>
+</div>
+<!-- Project Card 3 -->
+<div class="min-w-[320px] md:min-w-[450px] snap-start group">
+<div class="relative aspect-video rounded-xl overflow-hidden mb-stack-md shadow-md border border-outline-variant">
+<img alt="AV Project" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A stunning wide-shot of a high-end corporate auditorium featuring a massive, seamless LED video wall. The wall displays a high-resolution, artistic abstract animation in shades of blue and white. The auditorium lighting is perfectly synchronized with the screen, creating an immersive, professional atmosphere. This exemplifies the premium audiovisual production quality offered by HenryTic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_9XtZkAukyXi5JmDQhQb0N_lP4LQ1P9J7gMe1HKihx4CzusW4SLWtFVQlnc6BaVV1DchF-HIARtt33QDmtIK53I727E7E1e5dmEfEJaRaX3_gLR-B875qh0OOyKwbA_Gem96kBTQjeq4jlTAkmQgZQRcPlZg87lNKR-T7nR7am_uZ-H1qwzQ03tRmeOMmpbDzH9NA3b_SZqMqI1Yi7ZsiLqF8KDn0Ydib6h-oep6IndQHVqKQGQN-42qt8VVBh4GkHQ_jFuAOQMM"/>
+<div class="absolute top-4 left-4">
+<span class="bg-primary text-on-primary font-label-caps text-label-caps px-3 py-1 rounded shadow-lg uppercase">Audiovisual</span>
+</div>
+</div>
+<h4 class="font-h3 text-h3 mb-2">Cinematic Corporate Showcase</h4>
+<p class="text-on-surface-variant font-body-md mb-4">High-fidelity brand production and stage mapping for an international tech summit.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Project</span>
+<span class="font-bold">Brand Film</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-caps text-primary uppercase">Format</span>
+<span class="font-bold">8K Cinema</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA / Quote Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-on-surface text-white rounded-3xl p-stack-lg relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+<span class="material-symbols-outlined text-[300px] absolute -right-20 -top-20">settings_suggest</span>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-h1 text-display mb-stack-md leading-tight">Ready to Engineer Your <span class="text-primary-container">Next Breakthrough?</span></h2>
+<p class="font-body-lg text-surface-variant mb-stack-lg">Whether it's a complex software ecosystem or a large-scale hardware deployment, HenryTic provides the precision you require.</p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-lg font-h3 font-bold hover:bg-primary transition-all hover:text-white">
+                                Start Your Quote
+                            </button>
+<button class="border border-white/30 text-white px-8 py-4 rounded-lg font-h3 hover:bg-white/10 transition-all">
+                                Speak to an Engineer
+                            </button>
+</div>
+</div>
+<div class="bg-white/5 backdrop-blur-md rounded-2xl p-stack-md border border-white/10">
+<form class="space-y-4">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-surface-variant">Full Name</label>
+<input class="bg-white/10 border-white/20 rounded-lg text-white focus:border-primary-container focus:ring-primary-container placeholder-white/30" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-surface-variant">Corporate Email</label>
+<input class="bg-white/10 border-white/20 rounded-lg text-white focus:border-primary-container focus:ring-primary-container placeholder-white/30" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-surface-variant">Service Pillar</label>
+<select class="bg-white/10 border-white/20 rounded-lg text-white focus:border-primary-container focus:ring-primary-container">
+<option class="text-on-surface">Software Development</option>
+<option class="text-on-surface">Hardware Solutions</option>
+<option class="text-on-surface">Audiovisual Production</option>
+<option class="text-on-surface">Integrated Tech Package</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-surface-variant">Project Details</label>
+<textarea class="bg-white/10 border-white/20 rounded-lg text-white focus:border-primary-container focus:ring-primary-container h-24 placeholder-white/30" placeholder="Briefly describe your technical requirements..."></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 rounded-lg font-bold hover:bg-white hover:text-primary transition-all" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest text-surface-variant mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-stack-sm">
+<div class="flex items-center gap-3 mb-stack-sm">
+<img alt="HenryTic Logo" class="h-10 w-10 filter brightness-200" data-alt="A professional logo for a high-tech company named HenryTic, presented in white to contrast against a deep navy background. The emblem is modern and minimalist, showcasing stylized digital circuit patterns and a sleek camera lens. The design is sharp and geometric, emphasizing technical reliability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+</div>
+<p class="font-body-sm text-body-sm opacity-80 leading-relaxed max-w-xs">
+                    © 2024 Inversiones Tecnológicas Henry (HenryTic). Precision in software, hardware, and audiovisual excellence.
+                </p>
+<div class="flex gap-4 mt-4">
+<a class="hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+<a class="hover:text-primary-container transition-colors" href="#"><span class="material-symbols-outlined">podcasts</span></a>
+</div>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="text-white font-bold mb-2">Core Services</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Software Development</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Hardware Catalog</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">AV Productions</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-stack-sm">
+<h4 class="text-white font-bold mb-2">Company</h4>
+<ul class="space-y-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Technical Support</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Hardware y Servidores - HenryTic -->
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contáctanos | HenryTic - Soluciones Tecnológicas de Precisión</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-primary-container": "#004361",
+                    "outline": "#6e7882",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4851",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "tertiary-container": "#a2abb1",
+                    "inverse-surface": "#213145",
+                    "primary": "#006591",
+                    "primary-container": "#00b4ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#374044",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary": "#576065",
+                    "outline-variant": "#bdc8d2",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#55637d",
+                    "on-primary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#141d21",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#515f78",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-container": "#d2e0fe",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#006591",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "display": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .form-input-focus:focus {
+            outline: none;
+            border-color: #00b4ff;
+            box-shadow: 0 0 0 2px rgba(0, 180, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Barra de Navegación Superior -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<img alt="Logo de HenryTic" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Inicio</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Software</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Hardware</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors" href="#">Audiovisual</a>
+<a class="font-body-md text-body-md text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1" href="#">Contacto</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded hover:bg-on-primary-container transition-all active:scale-95 duration-100 font-bold">
+                Pedir Cotización
+            </button>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Sección Hero -->
+<section class="mb-stack-lg">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-primary mb-2 block tracking-widest uppercase">CONECTA CON EXPERTOS</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-4">Las soluciones de precisión comienzan con una conversación.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Ya sea que busque desarrollo de software empresarial, adquisición de hardware profesional o producción audiovisual de alta fidelidad, nuestro equipo está listo para diseñar su éxito.</p>
+</div>
+</section>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Sección Formulario de Contacto -->
+<div class="lg:col-span-7 bg-surface-container-lowest p-6 sm:p-8 md:p-12 rounded-xl border border-outline-variant shadow-sm">
+<h2 class="font-h2 text-h2 mb-8">Solicitud de Proyecto</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Nombre Completo</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface" placeholder="Ej. Juan Pérez" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Correo Electrónico</label>
+<input class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface" placeholder="juan@empresa.com" type="email"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Tipo de Consulta</label>
+<select class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface appearance-none">
+<option>Desarrollo de Software</option>
+<option>Catálogo y Adquisición de Hardware</option>
+<option>Producción Audiovisual y de Medios</option>
+<option>Consultoría Empresarial</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-body-sm text-body-sm text-on-surface-variant ml-1">Detalles del Proyecto</label>
+<textarea class="w-full px-4 py-3 rounded border border-outline-variant bg-surface-bright form-input-focus transition-all text-on-surface resize-none" placeholder="Describa sus requisitos técnicos o el alcance del proyecto..." rows="5"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full md:w-auto bg-primary text-on-primary px-10 py-4 rounded-lg font-bold text-body-lg shadow-md hover:shadow-lg hover:bg-on-primary-container transition-all active:scale-95" type="submit">
+                            Enviar Solicitud
+                        </button>
+</div>
+</form>
+</div>
+<!-- Columna de Información y Redes Sociales -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<!-- Tarjetas de Información -->
+<div class="grid grid-cols-1 gap-gutter">
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-outline-variant flex flex-col sm:flex-row gap-6 items-start">
+<div class="bg-primary-container p-3 rounded-lg text-on-primary-container shrink-0">
+<span class="material-symbols-outlined text-3xl">location_on</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-2">Sede Central</h3>
+<p class="text-on-surface-variant">Calle Tecnológica 124, Nivel 4<br/>Distrito de Innovación, 10112</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-outline-variant flex flex-col sm:flex-row gap-6 items-start">
+<div class="bg-primary-container p-3 rounded-lg text-on-primary-container shrink-0">
+<span class="material-symbols-outlined text-3xl">call</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-2">Contacto Directo</h3>
+<p class="text-on-surface-variant">+1 (829) 555-0192<br/>contacto@henrytic.com</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 sm:p-8 rounded-xl border border-outline-variant">
+<h3 class="font-h3 text-h3 mb-6">Conéctate con Nosotros</h3>
+<div class="flex flex-wrap gap-4">
+<a aria-label="Correo" class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+<a aria-label="Video" class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">video_library</span>
+</a>
+<a aria-label="Desarrollo" class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">developer_mode</span>
+</a>
+<a aria-label="Podcasts" class="w-12 h-12 rounded-full bg-on-surface text-surface flex items-center justify-center hover:bg-primary transition-colors group" href="#">
+<span class="material-symbols-outlined">podcasts</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sección del Mapa -->
+<section class="mt-stack-lg rounded-2xl overflow-hidden h-[450px] relative border border-outline-variant shadow-lg">
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<div class="text-center p-8 bg-surface/90 backdrop-blur-md rounded-xl shadow-xl max-w-md z-10 mx-4 border border-outline-variant">
+<span class="material-symbols-outlined text-5xl text-primary mb-4" data-weight="fill">map</span>
+<h3 class="font-h3 text-h3 mb-2">Encuéntranos</h3>
+<p class="text-on-surface-variant mb-6">Visite nuestro centro de innovación para una consulta personalizada sobre sus necesidades de software y hardware.</p>
+<button class="bg-on-surface text-surface px-6 py-2 rounded font-bold hover:bg-primary transition-colors">Abrir en Google Maps</button>
+</div>
+<!-- Textura de Mapa de Marcador de Posición -->
+<div class="absolute inset-0 opacity-40 mix-blend-multiply pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBl62CPkMRmqYox7nzeU7lL3hXAf6CmRA4f6Ng-dhT1b2_TG_3E4s3NkWAh26z3zHZItnGra05_aYWwc1aBKPpS3FCeI11lAgYwxadbWlqpj1TpNXVxxym-Hm9t1Mz33uG1DqIwG5YbFL_bU1fxro3GJW3SC18VxECoxzUtGPNbRirhyoklkIxFR6J58SiFZLg0BrRD4TAlMr9IApbqgpFm9Lmx-8foqn8cO1kei21tK2bEF5Z4l4nmpKgDOVpXbQATgY9QJqeCwHw')"></div>
+<div class="absolute inset-0" data-location="Sede Distrito de Innovación" style="background-color: #e5eeff">
+<!-- Este div representa el área del mapa -->
+</div>
+</div>
+</section>
+</main>
+<!-- Pie de Página -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+<p class="font-body-sm text-body-sm text-surface-variant opacity-80">© 2024 Inversiones Tecnológicas Henry (HenryTic). Precisión en software, hardware y excelencia audiovisual.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-inverse-primary dark:text-primary uppercase">SERVICIOS</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Desarrollo de Software</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Catálogo de Hardware</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Producciones AV</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-inverse-primary dark:text-primary uppercase">LEGAL</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Términos de Servicio</a></li>
+<li><a class="font-body-sm text-body-sm text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors" href="#">Política de Privacidad</a></li>
+</ul>
+</div>
+</div>
+</footer>
+</body></html>
+
+<!-- Inicio - HenryTic -->
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "on-primary-container": "#004361",
+                    "outline": "#6e7882",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#dce9ff",
+                    "on-surface-variant": "#3e4851",
+                    "on-surface": "#0b1c30",
+                    "inverse-primary": "#89ceff",
+                    "tertiary-fixed": "#dbe4ea",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#b9c7e4",
+                    "tertiary-container": "#a2abb1",
+                    "inverse-surface": "#213145",
+                    "primary": "#006591",
+                    "primary-container": "#00b4ff",
+                    "primary-fixed-dim": "#89ceff",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-tertiary-container": "#374044",
+                    "background": "#f8f9ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-variant": "#d3e4fe",
+                    "tertiary": "#576065",
+                    "outline-variant": "#bdc8d2",
+                    "secondary-fixed": "#d6e3ff",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#55637d",
+                    "on-primary-fixed": "#001e2f",
+                    "on-tertiary-fixed-variant": "#3f484d",
+                    "tertiary-fixed-dim": "#bfc8ce",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#141d21",
+                    "on-background": "#0b1c30",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed-variant": "#004c6e",
+                    "secondary": "#515f78",
+                    "surface-container-low": "#eff4ff",
+                    "primary-fixed": "#c9e6ff",
+                    "secondary-container": "#d2e0fe",
+                    "on-secondary-fixed": "#0d1c32",
+                    "surface-tint": "#006591",
+                    "surface-dim": "#cbdbf5",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "stack-md": "24px",
+                    "container-max": "1280px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "margin-desktop": "48px"
+            },
+            "fontFamily": {
+                    "h1": ["Space Grotesk"],
+                    "body-lg": ["Manrope"],
+                    "display": ["Space Grotesk"],
+                    "h2": ["Space Grotesk"],
+                    "body-md": ["Manrope"],
+                    "body-sm": ["Manrope"],
+                    "h3": ["Space Grotesk"],
+                    "label-caps": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "h1": ["36px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "h2": ["30px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "h3": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 240px;
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .bento-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: minmax(200px, auto);
+            }
+        }
+        @media (max-width: 640px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+                grid-auto-rows: auto;
+            }
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center h-20 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<img alt="HenryTic Logo" class="h-10 w-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeO65idOhmVU74iQzXOaT-CjG-D0ZtdfRmz0o_8SrOeMeMJzltCEQ6ySdY4akf3mI1uCiQgUWxWtphgWAPbRaL0zfDJwt8YoW3diTNCTavP5PrNl9XcdYMIOCJh__0OgbWs_7s3x3iA2uCiMsaBpwDLlv8OTm8LcSENnr8NZvRqdoYhzu48Hp5d89VsCk18ZdEw-nfhCDDUNUERUIcLCgTIsGsRyvMqiIgY7VAsJdQDwBdXBVwVQuG0cBNdNSW5sFs24UjiEZmVbs"/>
+<span class="font-display text-h3 font-bold text-primary dark:text-inverse-primary">HenryTic</span>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Inicio</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Software</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Hardware</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary pb-1 font-body-md" href="#">Audiovisual</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary transition-colors font-body-md" href="#">Contacto</a>
+</nav>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-body-md font-bold hover:bg-on-primary-container transition-all active:scale-95 duration-100 shadow-sm">
+                Cotizar Proyecto
+            </button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative py-stack-lg overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container via-surface to-surface"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
+<span class="font-label-caps text-primary mb-stack-sm tracking-widest bg-primary-container/20 px-4 py-1 rounded-full uppercase">Producción Multimedia Premium</span>
+<h1 class="font-display text-display text-on-surface max-w-3xl mb-stack-md">Calidad Cinematográfica para la Empresa Moderna.</h1>
+<p class="font-body-lg text-on-surface-variant max-w-2xl mb-stack-lg">Desde filmación de eventos de alto nivel hasta edición de video técnica, HenryTic ofrece precisión y excelencia creativa para elevar la historia de su marca.</p>
+<div class="flex flex-col sm:flex-row gap-gutter w-full sm:w-auto">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-body-md font-bold hover:shadow-lg transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">videocam</span> Ver Portafolio
+                    </button>
+<button class="border border-primary text-primary px-8 py-4 rounded-lg font-body-md font-bold hover:bg-primary-container/10 transition-all">
+                        Nuestro Proceso
+                    </button>
+</div>
+</div>
+</section>
+<!-- Service Bento Grid -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-stack-lg gap-4">
+<div class="max-w-xl">
+<h2 class="font-h2 text-h2 text-on-surface mb-stack-sm">Servicios Audiovisuales</h2>
+<p class="text-on-surface-variant font-body-md">Flujos de producción avanzados diseñados para eventos corporativos, lanzamientos de productos y narrativa digital.</p>
+</div>
+<div class="hidden md:block">
+<span class="material-symbols-outlined text-primary text-[48px] opacity-20">movie_edit</span>
+</div>
+</div>
+<div class="bento-grid">
+<!-- Filmación de Eventos (Grande) -->
+<div class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest flex flex-col">
+<div class="h-48 md:h-2/3 w-full bg-on-background relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-t from-on-background to-transparent z-10 opacity-60"></div>
+<div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrFHWi3g-v78H2pYGswC6R4YdzjEeGCrMNmpPDrYpD42f-77kLZaU9YXlIk4jJyPXD29soUPnFfDkFQv53sx6P0W6xlkB6cU7bxMmbiiJxt1CY6lCpNGF8g7N_4n4t-6CENpdmmx3d3MkExpqMSDCz7tbotRf0OYojIPM4AUrsrTIldYjsyIMtbuMCDXbR2mQ60XmyohvxNoAl61Q0WUt0jfbCJpxfn7MYrBzLuIHR7BXiVdDS7ysmYZgjTHoq9lTHMEPq7dMRaHM')"></div>
+</div>
+<div class="p-stack-md flex-grow flex flex-col justify-end">
+<span class="font-label-caps text-primary mb-2 uppercase">Producción</span>
+<h3 class="font-h3 text-h3 mb-2">Filmación Profesional de Eventos</h3>
+<p class="text-on-surface-variant font-body-sm">Cobertura multi-cámara 4K para conferencias, cumbres e inauguraciones con capacidades de transmisión en vivo.</p>
+</div>
+</div>
+<!-- Video Editing -->
+<div class="md:col-span-2 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex flex-col sm:flex-row gap-gutter items-start sm:items-center">
+<div class="w-16 h-16 sm:w-24 sm:h-24 flex-shrink-0 bg-primary-container/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl sm:text-4xl">timeline</span>
+</div>
+<div>
+<h3 class="font-h3 text-h3 mb-1">Post-Producción y Edición</h3>
+<p class="text-on-surface-variant font-body-sm">Precisión en la edición, corrección de color y diseño sonoro para crear una narrativa final impecable.</p>
+</div>
+</div>
+<!-- Live Streaming -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex flex-col">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">sensors</span>
+<h3 class="font-h3 text-h3 mb-1">Streaming en Vivo</h3>
+<p class="text-on-surface-variant font-body-sm">Transmisión global para sus eventos virtuales.</p>
+</div>
+<!-- Motion Graphics -->
+<div class="md:col-span-1 md:row-span-1 relative group overflow-hidden rounded-xl border border-outline-variant shadow-sm bg-surface-container-lowest p-stack-md flex flex-col">
+<span class="material-symbols-outlined text-primary mb-4 text-3xl">blur_on</span>
+<h3 class="font-h3 text-h3 mb-1">Diseño Motion</h3>
+<p class="text-on-surface-variant font-body-sm">Logotipos animados y gráficos dinámicos.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Equipment Showcase -->
+<section class="py-stack-lg bg-inverse-surface text-inverse-on-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-h2 text-h2 mb-stack-md">La excelencia técnica comienza con hardware de precisión</h2>
+<p class="text-surface-variant opacity-80 font-body-lg mb-stack-lg">Invertimos en hardware estándar de la industria para asegurar que su proyecto se beneficie de la mayor fidelidad posible. Sin compromisos en equipos, sin compromisos en calidad.</p>
+<ul class="space-y-stack-sm mb-stack-lg">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Flujo de trabajo Blackmagic Design 6K Cinema</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Audio profesional de grado Sennheiser y Rode</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Soluciones de iluminación cinematográfica Aputure</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md">Estaciones de edición de alto rendimiento personalizadas</span>
+</li>
+</ul>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 grid grid-cols-2 gap-4 relative">
+<div class="pt-6 md:pt-12">
+<div class="rounded-xl overflow-hidden shadow-2xl h-48 md:h-80">
+<img alt="Lente de cámara profesional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbJrxpdgvE5mW0xDX0Cq-8abtMTY14eZGc0Jyqrn7rydgo9Bbuaw-C6tVqjFClthVleT1i-v05wklO5i5g0E3d_59oiii95EqBPF-EWMlTJMLLMEQq7lkKEibSHLCr8AJUXhAcLxMxIv_w52jnBD_dSYitdCfplRGd5tDZWmvIvf_ESkY6elHxHE0Uo1QHKWLTBoIoOD2GKeufmDZcrEdlCk8cbqZvlpl0EefPDCFpsYcEjtpwikAbHDgh_s0qFICyuiBi10deTto"/>
+</div>
+</div>
+<div class="space-y-4">
+<div class="rounded-xl overflow-hidden shadow-2xl h-36 md:h-60">
+<img alt="Estación de edición moderna" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsYWK3Cwm2FNNI3C525zFcYZYITOZhCwBtNesLjEMEiU3Sy5dIX3mv-oQ7v6EquAe4qst5V8lygct2FUEEXLIVkSAHSCXl45VxuI7IROReAZq4e5DBrYIdr45JZLyBS2iBZ4utV22z6ivfcJW7EkziwywXiKUWidProacrFPNzvsSK1W5R8d_IGPpgi67JPDSMoPx4UVNoTQnlcSDKvm901AB31toUMiaDSrwVdh6L1rh2WYvM9pcxyIvrlNN8rdeCvJ3Pd6o-zRg"/>
+</div>
+<div class="rounded-xl overflow-hidden shadow-2xl h-24 md:h-48 bg-primary-container/20 flex items-center justify-center p-stack-md text-center">
+<div>
+<p class="text-h2 md:text-h1 font-bold text-primary-container">4K/6K</p>
+<p class="font-label-caps tracking-tighter text-[10px] md:text-label-caps">CAPTURA ULTRA HD</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Packages -->
+<section class="py-stack-lg bg-surface">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-stack-lg">
+<h2 class="font-h2 text-h2 text-on-surface mb-2">Paquetes de Producción</h2>
+<p class="text-on-surface-variant font-body-md">Soluciones escalables adaptadas a los requerimientos de su proyecto.</p>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Esencial -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl flex flex-col shadow-sm">
+<span class="font-label-caps text-secondary mb-4 uppercase">Esencial</span>
+<h3 class="font-h3 text-h3 mb-2">Registro de Evento</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">Ideal para documentación interna y seminarios pequeños.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">$850<span class="text-body-sm font-normal text-on-surface-variant">/día</span></div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> 1 Cámara Estática 4K</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Captura de Audio Básica</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Entrega de Metraje Crudo</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold hover:bg-primary-container/10 transition-all mt-auto">Elegir Plan</button>
+</div>
+<!-- Profesional -->
+<div class="bg-surface-container-highest border-2 border-primary p-stack-lg rounded-xl flex flex-col relative shadow-xl transform md:-translate-y-4">
+<div class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-on-primary font-label-caps px-4 py-1 rounded-full uppercase">Popular</div>
+<span class="font-label-caps text-primary mb-4 uppercase">Profesional</span>
+<h3 class="font-h3 text-h3 mb-2">Historia Multi-Cam</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">Cobertura dinámica para eventos corporativos públicos.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">$2,400<span class="text-body-sm font-normal text-on-surface-variant">/día</span></div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> 2-3 Cámaras Dinámicas 4K</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Audio Digital Multi-pista</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Edición de Highlights y Color</li>
+<li class="flex items-center gap-2 text-body-sm font-bold"><span class="material-symbols-outlined text-primary text-lg">check</span> Teasers para Redes Sociales</li>
+</ul>
+<button class="w-full bg-primary text-on-primary py-3 rounded-lg font-bold hover:bg-on-primary-container transition-all mt-auto">Elegir Plan</button>
+</div>
+<!-- Cinema -->
+<div class="bg-surface-container-lowest border border-outline-variant p-stack-lg rounded-xl flex flex-col shadow-sm">
+<span class="font-label-caps text-secondary mb-4 uppercase">Enterprise</span>
+<h3 class="font-h3 text-h3 mb-2">Marca Cinematográfica</h3>
+<p class="text-on-surface-variant font-body-sm mb-6">Producción de alta fidelidad para comerciales y keynotes.</p>
+<div class="text-h1 font-bold text-on-surface mb-stack-md">Personalizado</div>
+<ul class="space-y-3 mb-stack-lg flex-grow">
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Workflow Cinema Rig 6K</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Iluminación y Grips Avanzados</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Motion Graphics Personalizados</li>
+<li class="flex items-center gap-2 text-body-sm"><span class="material-symbols-outlined text-primary text-lg">check</span> Ciclo de Edición Prioritario</li>
+</ul>
+<button class="w-full border border-primary text-primary py-3 rounded-lg font-bold hover:bg-primary-container/10 transition-all mt-auto">Consultar Ahora</button>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-stack-lg">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="bg-primary rounded-3xl p-stack-lg flex flex-col md:flex-row items-center justify-between gap-gutter overflow-hidden relative">
+<div class="absolute top-0 right-0 w-1/2 h-full bg-on-primary-container/10 -skew-x-12 translate-x-1/4 hidden md:block"></div>
+<div class="relative z-10 text-center md:text-left max-w-2xl">
+<h2 class="font-h2 text-h2 text-on-primary mb-4">¿Listo para comenzar su próxima producción?</h2>
+<p class="text-primary-fixed opacity-90 font-body-md">Nuestro equipo técnico está listo para asistirle con la programación, logística de equipos y planificación creativa.</p>
+</div>
+<div class="relative z-10 w-full md:w-auto">
+<button class="w-full md:w-auto bg-surface text-primary px-10 py-4 rounded-full font-bold text-h3 hover:bg-primary-container hover:text-on-primary-container transition-all shadow-lg active:scale-95">
+                            Colaboremos
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-surface-container-lowest w-full mt-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-display text-h3 font-bold text-inverse-on-surface dark:text-on-surface">HenryTic</span>
+<p class="font-body-sm text-surface-variant opacity-80 leading-relaxed">Precisión en software, hardware y excelencia audiovisual. Entregando soluciones de alta fidelidad para empresas profesionales desde 2010.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-inverse-primary dark:text-primary mb-2">Servicios</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Desarrollo de Software</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Catálogo de Hardware</a>
+<a class="text-inverse-primary font-bold font-body-sm" href="#">Producciones Audiovisuales</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Términos de Servicio</a>
+<a class="text-surface-variant opacity-80 hover:opacity-100 hover:text-primary-container transition-colors font-body-sm" href="#">Política de Privacidad</a>
+</nav>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-h3 text-inverse-primary dark:text-primary mb-2">Conéctese con nosotros</h4>
+<div class="flex gap-4 mb-4">
+<a class="w-10 h-10 bg-on-primary-fixed-variant rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 bg-on-primary-fixed-variant rounded-full flex items-center justify-center text-inverse-on-surface hover:bg-primary transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+<p class="font-body-sm text-surface-variant opacity-80">© 2024 Inversiones Tecnológicas Henry (HenryTic). Todos los derechos reservados.</p>
+</div>
+</div>
+</footer>
+</body></html>
