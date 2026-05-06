@@ -1,0 +1,19 @@
+steps:
+  # Paso 1: Construir la imagen y subirla a Artifact Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/TU_PROJECT_ID/tu-app-name:$COMMIT_SHA', '.']
+  
+  # Paso 2: Subir la imagen
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/TU_PROJECT_ID/tu-app-name:$COMMIT_SHA']
+
+  # Paso 3: Desplegar en Cloud Run automáticamente
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'TU_SERVICIO_EN_CLOUD_RUN'
+      - '--image=gcr.io/TU_PROJECT_ID/tu-app-name:$COMMIT_SHA'
+      - '--region=us-central1' # Cambia según tu región
+      - '--platform=managed'
