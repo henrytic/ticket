@@ -17,3 +17,6 @@ steps:
       - '--image=gcr.io/TU_PROJECT_ID/tu-app-name:$COMMIT_SHA'
       - '--region=us-central1' # Cambia según tu región
       - '--platform=managed'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
