@@ -1,6 +1,11 @@
-# Usar Nginx para servir archivos estáticos
+# Usar un servidor web ligero
 FROM nginx:alpine
-# Copiar tus archivos al directorio por defecto de Nginx
-COPY ./dist /usr/share/nginx/html
+
+# Copiar TU archivo index.html directamente a la carpeta pública del servidor
+COPY index.html /usr/share/nginx/html/index.html
+
+# Exponer el puerto
 EXPOSE 80
+
+# Iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
